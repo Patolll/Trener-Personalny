@@ -1,0 +1,28 @@
+@import "tailwindcss";
+.bg-gradient-custom {
+  background: linear-gradient(
+    to bottom,
+    #12151a 0%,
+    #12151a 40%,
+    #2b0707 95%,
+    #310101 100%
+  );
+}
+#mobileMenu.menu-open a {
+  opacity: 1 !important;
+  transform: translateY(70px) !important;
+  pointer-events: auto;
+}
+
+#mobileMenu.menu-open a:nth-child(1) {
+  transition-delay: 0.05s;
+}
+#mobileMenu.menu-open a:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#mobileMenu.menu-open a:nth-child(3) {
+  transition-delay: 0.15s;
+}
+#mobileMenu.menu-open a:nth-child(4) {
+  transition-delay: 0.2s;
+}
