@@ -1,6 +1,7 @@
 import "./style.css";
 const toggleBtn = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
+const mobileIcon = document.getElementById("menuIcon");
 let isOpen = false;
 
 // Toggle the mobile menu on button click
@@ -8,10 +9,16 @@ toggleBtn.addEventListener("click", () => {
   if (isOpen) {
     mobileMenu.classList.remove("max-h-screen", "menu-open");
     mobileMenu.classList.add("max-h-0");
+    mobileIcon.classList.remove("fa-xmark");
+    mobileIcon.classList.add("fa-bars");
+    menuToggle.classList.toggle("open");
     isOpen = false;
   } else {
     mobileMenu.classList.remove("max-h-0");
+    menuToggle.classList.toggle("open");
     mobileMenu.classList.add("max-h-screen", "menu-open");
+    mobileIcon.classList.remove("fa-bars");
+    mobileIcon.classList.add("fa-xmark");
     isOpen = true;
   }
 });
@@ -21,6 +28,9 @@ function updateSize() {
   if (isOpen && window.innerWidth >= 1024) {
     mobileMenu.classList.remove("max-h-screen", "menu-open");
     mobileMenu.classList.add("max-h-0");
+    mobileIcon.classList.remove("fa-xmark");
+    mobileIcon.classList.add("fa-bars");
+    menuToggle.classList.toggle("open");
     isOpen = false;
   }
 }
@@ -31,7 +41,58 @@ const menuLinks = document.querySelectorAll("#mobileMenu a");
 menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("max-h-screen", "menu-open");
+    menuToggle.classList.toggle("open");
     mobileMenu.classList.add("max-h-0");
+    mobileIcon.classList.remove("fa-xmark");
+    mobileIcon.classList.add("fa-bars");
     isOpen = false;
   });
+});
+
+// Add hover event listener to the images
+const images = document.querySelectorAll("#divimg img");
+
+images.forEach((img) => {
+  img.addEventListener("mouseenter", () => {
+    images.forEach((otherImg) => {
+      if (otherImg === img) {
+        otherImg.style.width = "70%";
+        otherImg.style.zIndex = "10";
+        otherImg.style.filter = "brightness(1)";
+      } else {
+        otherImg.style.width = "15%";
+        otherImg.style.zIndex = "0";
+        otherImg.style.filter = "brightness(0.6)";
+      }
+    });
+  });
+
+  img.addEventListener("mouseleave", () => {
+    images.forEach((img) => {
+      img.style.width = "33.33%";
+      img.style.zIndex = "0";
+      img.style.filter = "brightness(1)";
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(
+    ".fade-in-right, .fade-in-left, .fade-in-down, .fade-in-up"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  elements.forEach((el) => observer.observe(el));
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/logo.ico" />
@@ -12,10 +12,10 @@
     <title>Adrian Zubrycki - Trener personalny</title>
   </head>
 
-  <body class="font-[montserrat] scroll-smooth">
-    <header class="w-full xl:h-25 fixed bg-[#12151a]">
+  <body class="font-[montserrat]">
+    <header class="w-full bg-[#12151a] z-50">
       <!-- navigation -->
-      <nav class="w-full xl:h-25 fixed flex justify-center px-6 py-10">
+      <nav class="w-full flex justify-center px-6">
         <!-- desktop navigation -->
         <ul
           class="hidden xl:flex xl:px-2 xl:py-2 mt-12 flex-row h-full items-center justify-around lg:text-3xl xl:text-3xl font-semibold text-white"
@@ -117,7 +117,7 @@
             </li>
             <li class="mx-2 px-2 py-2">
               <button id="menuToggle" class="xl:hidden text-white text-5xl">
-                <i class="fas fa-bars"></i>
+                <i id="menuIcon" class="fas fa-bars"></i>
               </button>
             </li>
           </ul>
@@ -125,7 +125,7 @@
         <!-- mobile menu from button-->
         <div
           id="mobileMenu"
-          class="bg-gradient-custom text-white text-2xl top-35 flex flex-col items-center fixed inset-0 z-50 max-h-0 overflow-hidden gap-8"
+          class="bg-gradient-custom text-white text-2xl top-25 flex flex-col items-center fixed inset-0 z-50 max-h-0 overflow-hidden gap-8"
         >
           <a
             href="/#o-mnie"
@@ -155,8 +155,72 @@
         </div>
       </nav>
     </header>
+    <main class="bg-[#12151a] w-full min-h-screen text-white">
+      <!-- Hero Section -->
+      <section
+        class="w-full min-h-[70vh] flex flex-col xl:flex-row items-center gap-5 xl:gap-0 justify-center"
+      >
+        <!-- Tekst -->
+        <div
+          class="text-center lg:text-left px-5 py-5 max-w-xl mt-0 sm:-mt-40 md:mt-10 xl:-mt-50"
+        >
+          <h1
+            class="red-shadow text-4xl md:text-5xl font-bold mb-6 leading-tight fade-in-down"
+          >
+            Jestem
+            <span class="text-red-600"> Twoim nowym</span> trenerem
+            Personalnym<br />
+          </h1>
+          <p
+            class="text-xl md:text-3xl mb-8 red-shadow text-gray-300 fade-in-up"
+          >
+            Pomagam zmieniać sylwetki i podejście do zdrowia. <br />Dołącz i
+            zacznij swoją metamorfozę już dziś!
+          </p>
+          <button
+            class="bg-gradient-to-r cursor-pointer from-[#640b0b] to-[#770202] text-white px-8 py-4 rounded-2xl text-xl font-semibold hover:from-red-800 hover:to-[#921111] transition-colors duration-500"
+          >
+            Dołącz do mnie
+          </button>
+        </div>
 
-    <main class="bg-[#12151a] min-h-screen w-full"></main>
+        <!-- Zdjęcia -->
+        <div
+          id="divimg"
+          class="flex justify-center gap-3 max-w-[450px] md:max-w-[550px] xl:max-w-[650px] px-10 py-10 xl:-mt-30"
+        >
+          <img
+            id="zdj1"
+            src="/src/assets/trener/adi1.jpg"
+            alt="Adrian Zubrycki 1"
+            class="rounded-tl-2xl fade-in-down rounded-bl-2xl shadow-xl object-cover h-[250px] md:h-[400px] xl:h-[650px] w-1/3 transition-all duration-200 ease-in-out"
+          />
+          <img
+            id="zdj2"
+            src="/src/assets/trener/adi2.png"
+            alt="Adrian Zubrycki 2"
+            class="shadow-xl object-cover fade-in-up h-[250px] md:h-[400px] xl:h-[650px] w-1/3 transition-all duration-200 ease-in-out"
+          />
+          <img
+            id="zdj3"
+            src="/src/assets/trener/adi3.jpg"
+            alt="Adrian Zubrycki 3"
+            class="rounded-tr-2xl rounded-br-2xl fade-in-down shadow-xl object-cover h-[250px] md:h-[400px] xl:h-[650px] w-1/3 transition-all duration-200 ease-in-out"
+          />
+        </div>
+      </section>
+      <!-- O mnie Section -->
+      <section
+        id="o-mnie"
+        class="bg-[#242424] w-full min-h-[70vh] flex flex-col items-center"
+      >
+        <div class="pt-20">
+          <h1 class="font-bold text-3xl lg:text-5xl red-shadow fade-in-down">
+            Kim jestem?
+          </h1>
+        </div>
+      </section>
+    </main>
 
     <!-- <footer>
       <p>© 2023 Adrian Zubrycki - Trener personalny</p>
