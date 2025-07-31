@@ -34,15 +34,11 @@
           >
             <a href="/#o-mnie">O mnie</a>
           </li>
+
           <li
             class="mx-4 px-4 py-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
           >
-            <a href="/#wspolpraca">Przebieg Współpracy</a>
-          </li>
-          <li
-            class="mx-4 px-4 py-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
-          >
-            <a href="/#oferta">Oferta</a>
+            <a href="/#wspolpraca">Współpraca</a>
           </li>
           <li
             class="mx-4 px-4 py-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
@@ -77,11 +73,12 @@
             </a>
           </li>
           <li>
-            <button
-              class="bg-gradient-to-r from-[#640b0b] to-[#770202] text-white xl:px-6 xl:py-4 xl:text-2xl md:text-lg md:px-2 md:py-0 rounded-2xl cursor-pointer hover:from-red-800 hover:to-[#921111] transition-all duration-500"
+            <a
+              href="/#kontakt"
+              class="bg-red-500 text-white xl:px-6 xl:py-4 xl:text-2xl md:text-lg md:px-2 md:py-0 rounded-2xl cursor-pointer hover:bg-red-600 transition-all duration-500"
             >
               Dołącz do mnie
-            </button>
+            </a>
           </li>
         </ul>
         <!-- hamburger menu -->
@@ -121,9 +118,9 @@
               </a>
             </li>
             <li class="mx-2 px-2 py-2">
-              <button id="menuToggle" class="xl:hidden text-white text-5xl">
+              <a id="menuToggle" class="xl:hidden text-white text-5xl">
                 <i id="menuIcon" class="fas fa-bars"></i>
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -152,11 +149,12 @@
             class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
             >Kontakt</a
           >
-          <button
-            class="bg-gradient-to-r w-[80%] mt-auto mb-10 from-[#640b0b] to-[#770202] text-white px-5 py-3 rounded-2xl"
+          <a
+            href="/#kontakt"
+            class="bg-red-500 w-[80%] mt-auto mb-10 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
           >
             Dołącz do mnie
-          </button>
+          </a>
         </div>
       </nav>
     </header>
@@ -173,7 +171,7 @@
             class="red-shadow text-4xl md:text-5xl font-bold mb-6 leading-tight fade-in-down"
           >
             Jestem
-            <span class="text-red-600"> Twoim nowym</span> trenerem
+            <span class="text-red-500"> Twoim nowym</span> trenerem
             Personalnym<br />
           </h1>
           <p
@@ -182,11 +180,12 @@
             Pomagam zmieniać sylwetki i podejście do zdrowia. <br />Dołącz i
             zacznij swoją metamorfozę już dziś!
           </p>
-          <button
-            class="bg-gradient-to-r cursor-pointer from-[#640b0b] to-[#770202] text-white px-8 py-4 rounded-2xl text-xl font-semibold hover:from-red-800 hover:to-[#921111] transition-colors duration-500"
+          <a
+            href="/#kontakt"
+            class="bg-red-500 cursor-pointer text-white px-8 py-4 rounded-2xl text-xl font-semibold hover:bg-red-600 transition-colors duration-500"
           >
             Dołącz do mnie
-          </button>
+          </a>
         </div>
 
         <!-- images -->
@@ -237,7 +236,7 @@
               class="text-lg lg:text-4xl text-white font-semibold fade-in-right red-shadow"
             >
               Cześć! Nazywam się
-              <span class="text-red-600">Adrian Zubrycki</span> i jestem
+              <span class="text-red-500">Adrian Zubrycki</span> i jestem
               trenerem personalnym z pasją do zdrowego stylu życia. Moim celem
               jest pomóc Ci osiągnąć Twoje cele fitnessowe i poprawić jakość
               Twojego życia.
@@ -335,7 +334,7 @@
         >
           <!-- Offer 1 -->
           <div
-            class="border-red-500 bg-[#1e2129] shadow-md shadow-red-500 border-2 lg:w-[40%] w-full min-h-[800px] rounded-2xl flex flex-col items-center"
+            class="border-red-500 bg-[#1e2129] shadow-md shadow-red-500 border-2 lg:w-[40%] w-full min-h-[800px] rounded-2xl flex flex-col items-center justify-between"
           >
             <h1
               class="text-4xl text-center lg:text-5xl font-bold text-red-500 pt-10"
@@ -353,37 +352,36 @@
             <ul
               class="mt-20 px-8 space-y-3 text-white text-3xl red-shadow flex flex-col gap-8"
             >
-              <li>
+              <li class="fade-in-offer-1">
                 <i class="fas fa-dumbbell text-red-500 mr-2"></i>Plan treningowy
                 dopasowany do Twoich celów
               </li>
-              <li>
+              <li class="fade-in-offer-2">
                 <i class="fas fa-utensils text-red-500 mr-2"></i>Wskazówki
                 dietetyczne
               </li>
-              <li>
+              <li class="fade-in-offer-3">
                 <i class="fas fa-video text-red-500 mr-2"></i>Analiza techniki
                 wideo
               </li>
-              <li>
+              <li class="fade-in-offer-4">
                 <i class="fas fa-comments text-red-500 mr-2"></i>Stały kontakt
                 online
               </li>
             </ul>
 
-            <p class="text-3xl font-bold text-red-500 mt-25">199 zł/mies.</p>
+            <p class="text-3xl font-bold text-red-500 mt-15">199 zł/mies.</p>
 
             <a
               href="#kontakt"
-              class="mt-8 bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 transition duration-300 w-[80%] text-center text-2xl"
+              class="mt-8 mb-8 bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 transition duration-300 w-[80%] text-center text-2xl"
             >
               Zapisz się <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
-
           <!-- Offer 2 -->
           <div
-            class="border-red-500 bg-[#1e2129] shadow-md shadow-red-500 border-2 lg:w-[40%] w-full min-h-[800px] rounded-2xl flex flex-col items-center"
+            class="border-red-500 bg-[#1e2129] shadow-md shadow-red-500 border-2 lg:w-[40%] w-full min-h-[800px] rounded-2xl flex flex-col items-center justify-between"
           >
             <h1
               class="text-4xl text-center lg:text-5xl font-bold text-red-500 pt-10"
@@ -401,31 +399,31 @@
             <ul
               class="mt-20 px-8 space-y-3 text-white text-3xl red-shadow flex flex-col gap-8"
             >
-              <li>
+              <li class="fade-in-offer-1">
                 <i class="fas fa-user-check text-red-500 mr-2"></i>Treningi
                 personalne 1:1
               </li>
-              <li>
+              <li class="fade-in-offer-2">
                 <i class="fas fa-heartbeat text-red-500 mr-2"></i>Analiza formy
                 i postępów
               </li>
-              <li>
+              <li class="fade-in-offer-3">
                 <i class="fas fa-calendar-check text-red-500 mr-2"></i>Stały
                 harmonogram spotkań
               </li>
-              <li>
+              <li class="fade-in-offer-4">
                 <i class="fas fa-thumbs-up text-red-500 mr-2"></i>Motywacja i
                 wsparcie na miejscu
               </li>
             </ul>
 
-            <p class="text-3xl font-bold text-red-500 mt-25">249 zł/mies.</p>
+            <p class="text-3xl font-bold text-red-500 mt-15">249 zł/mies.</p>
 
             <a
               href="#kontakt"
-              class="mt-8 bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 transition duration-300 w-[80%] text-center text-2xl"
+              class="mb-8 mt-8 bg-red-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-600 transition duration-300 w-[80%] text-center text-2xl"
             >
-              Umów się <i class="fas fa-map-marker-alt ml-2"></i>
+              Zapisz się <i class="fas fa-arrow-right ml-2"></i>
             </a>
           </div>
         </div>
