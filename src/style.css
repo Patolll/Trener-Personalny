@@ -73,6 +73,7 @@
     transform: translateY(0);
   }
 }
+/* box anims */
 @keyframes fadeInLeftBox1 {
   0% {
     opacity: 0;
