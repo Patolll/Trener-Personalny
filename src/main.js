@@ -75,13 +75,14 @@ images.forEach((img) => {
     });
   });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(
-    ".fade-in-right, .fade-in-left, .fade-in-down, .fade-in-up"
+    ".fade-in-right, .fade-in-left, .fade-in-down, .fade-in-up, .fade-in-1, .fade-in-2, .fade-in-3, .fade-in-4"
   );
 
   const observer = new IntersectionObserver(
-    (entries) => {
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate");
@@ -90,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.1,
+      threshold: 0.4,
     }
   );
 
