@@ -2,6 +2,8 @@ import "./style.css";
 const toggleBtn = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileIcon = document.getElementById("menuIcon");
+const header = document.getElementById("mainHeader");
+
 let isOpen = false;
 
 // Toggle the mobile menu on button click
@@ -12,6 +14,7 @@ toggleBtn.addEventListener("click", () => {
     mobileIcon.classList.remove("fa-xmark");
     mobileIcon.classList.add("fa-bars");
     menuToggle.classList.toggle("open");
+    header.classList.remove("fixed", "top-0", "left-0", "right-0");
     isOpen = false;
   } else {
     mobileMenu.classList.remove("max-h-0");
@@ -19,6 +22,7 @@ toggleBtn.addEventListener("click", () => {
     mobileMenu.classList.add("max-h-screen", "menu-open");
     mobileIcon.classList.remove("fa-bars");
     mobileIcon.classList.add("fa-xmark");
+    header.classList.add("fixed", "top-0", "left-0", "right-0");
     isOpen = true;
   }
 });
@@ -31,6 +35,7 @@ function updateSize() {
     mobileIcon.classList.remove("fa-xmark");
     mobileIcon.classList.add("fa-bars");
     menuToggle.classList.toggle("open");
+    header.classList.remove("fixed", "top-0", "left-0", "right-0");
     isOpen = false;
   }
 }
@@ -45,6 +50,7 @@ menuLinks.forEach((link) => {
     mobileMenu.classList.add("max-h-0");
     mobileIcon.classList.remove("fa-xmark");
     mobileIcon.classList.add("fa-bars");
+    header.classList.remove("fixed", "top-0", "left-0", "right-0");
     isOpen = false;
   });
 });
@@ -91,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.4,
+      threshold: 0.1,
     }
   );
 
