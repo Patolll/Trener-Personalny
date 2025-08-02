@@ -268,3 +268,10 @@
   transform: rotate(180deg);
   opacity: 0.8;
 }
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: #12151a !important;
+  color: white !important;
+  box-shadow: 0 0 0px 1000px #12151a inset !important;
+  -webkit-text-fill-color: white !important;
+}
