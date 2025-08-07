@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Adrian Zubrycki - Trener personalny pomagający osiągnąć Twoje cele sylwetkowe. Sprawdź ofertę współpracy, metamorfozy i kontakt."
+    />
+    <meta
+      name="keywords"
+      content="trener personalny, treningi online, metamorfozy, dieta, sylwetka, siłownia, Adrian Zubrycki"
+    />
+    <meta name="author" content="Adrian Zubrycki" />
+    <meta property="og:title" content="Adrian Zubrycki - Trener personalny" />
+    <meta
+      property="og:description"
+      content="Pomagam osiągać cele sylwetkowe. Zobacz efekty i dołącz do współpracy!"
+    />
+    <meta
+      property="og:image"
+      content="https://patryk-test.rf.gd/assets/logo.webp"
+    />
+    <meta property="og:url" content="https://patryk-test.rf.gd/" />
+    <meta property="og:type" content="website" />
+
+    <title>Adrian Zubrycki - Trener personalny</title>
+  </head>
+
+  <body class="font-[montserrat]">
+    <header id="mainHeader" class="w-full bg-[#12151a] z-50">
+      <!-- navigation -->
+      <nav class="w-full flex justify-center px-6">
+        <!-- desktop navigation -->
+        <ul
+          class="hidden xl:flex xl:px-2 xl:py-2 mt-12 flex-row h-full items-center justify-around text-2xl 2xl:text-3xl font-semibold text-white"
+        >
+          <li>
+            <a href="/">
+              <img
+                src="/src/assets/logo.webp"
+                alt="Logo Adrian Zubrycki"
+                class="h-25 transition-all duration-300 hover:scale-115"
+                aria-label="Logo Adrian Zubrycki"
+              />
+            </a>
+          </li>
+          <li
+            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
+          >
+            <a href="/#o-mnie">O mnie</a>
+          </li>
+
+          <li
+            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
+          >
+            <a href="/#wspolpraca">Współpraca</a>
+          </li>
+          <li
+            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
+          >
+            <a href="/#metamorfozy">Metamorfozy</a>
+          </li>
+          <li
+            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
+          >
+            <a href="/#kontakt">Kontakt</a>
+          </li>
+          <li
+            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
+          >
+            <a
+              href="https://www.instagram.com/bisonycki_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram text-4xl"></i>
+            </a>
+          </li>
+          <li
+            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 transition-all hover:scale-115 duration-300"
+          >
+            <a
+              href="https://www.facebook.com/profile.php?id=61563356401956#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook text-4xl"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#kontakt"
+              class="bg-red-500 text-white xl:px-6 xl:py-4 xl:text-2xl md:text-lg md:px-2 md:py-0 rounded-2xl cursor-pointer hover:bg-red-600 transition-all duration-500"
+            >
+              Dołącz do mnie
+            </a>
+          </li>
+        </ul>
+        <!-- hamburger menu -->
+        <div class="flex xl:hidden w-full justify-between items-center">
+          <ul
+            class="flex items-center px-2 py-2 text-3xl font-semibold text-white"
+          >
+            <li>
+              <a href="/">
+                <img
+                  src="/src/assets/logo.webp"
+                  alt="Logo Adrian Zubrycki"
+                  class="h-25"
+                  aria-label="Logo Adrian Zubrycki"
+                />
+              </a>
+            </li>
+          </ul>
+          <ul
+            class="flex items-center text-xl md:text-xl font-semibold text-white"
+          >
+            <li class="mx-2 px-2 py-2">
+              <a
+                href="https://www.instagram.com/bisonycki_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram text-5xl"></i>
+              </a>
+            </li>
+            <li class="mx-2 px-2 py-2">
+              <a
+                href="https://www.facebook.com/profile.php?id=61563356401956#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook text-5xl"></i>
+              </a>
+            </li>
+            <li class="mx-2 px-2 py-2">
+              <a id="menuToggle" class="xl:hidden text-white text-5xl">
+                <i id="menuIcon" class="fas fa-bars"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- mobile menu from button-->
+        <div
+          id="mobileMenu"
+          class="bg-gradient-custom text-white text-2xl top-25 flex flex-col items-center fixed inset-0 z-50 max-h-0 overflow-hidden gap-8"
+        >
+          <a
+            href="/#o-mnie"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >O mnie</a
+          >
+          <a
+            href="/#wspolpraca"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Współpraca</a
+          >
+          <a
+            href="/#kontakt"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Metamorfozy</a
+          >
+          <a
+            href="/#kontakt"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Kontakt</a
+          >
+          <a
+            href="/#kontakt"
+            class="bg-red-500 w-[80%] mt-auto mb-10 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
+          >
+            Dołącz do mnie
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-[#12151a] w-full min-h-screen text-black">
+      <section id="polityka-prywatnosci" class="bg-[#12151a] md:w-1/2 mx-auto">
+        <h2
+          class="text-center red-shadow font-bold mb-12 text-xl sm:text-2xl md:text-3xl lg:text-5xl fade-in-down lg:mb-20 text-white pt-10"
+        >
+          Polityka Prywatności
+        </h2>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            1. Administrator danych osobowych
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            Administratorem Twoich danych osobowych jest Adrian Zubrycki.
+          </p>
+        </div>
+
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            2. Kontakt z administratorem
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            W sprawach związanych z przetwarzaniem danych osobowych możesz
+            kontaktować się mailowo: 📧
+            <a
+              class="text-red-500 hover:text-red-800 duration-500 ease-in-out"
+              href="mailto:zubryckiprowadzenie@gmail.com"
+              >zubryckiprowadzenie@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            3. Zakres zbieranych danych
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            Za pośrednictwem formularza kontaktowego zbierane są następujące
+            dane:
+          </p>
+          <ul
+            class="text-white red-shadow sm:mt-5 flex flex-col gap-2 list-disc list-inside"
+          >
+            <li>Imię i nazwisko</li>
+            <li>Adres e-mail</li>
+            <li>Numer telefonu</li>
+            <li>Treść wiadomości</li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            4. Cel przetwarzania danych
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            Dane osobowe są przetwarzane wyłącznie w celu:
+          </p>
+          <ul
+            class="text-white red-shadow sm:mt-5 flex flex-col gap-2 list-disc list-inside"
+          >
+            <li>udzielenia odpowiedzi na przesłane zapytanie,</li>
+            <li>kontaktu związanego z oferowanymi usługami trenerskimi.</li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            5. Podstawa prawna przetwarzania
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            Podstawą przetwarzania danych jest:
+          </p>
+          <ul
+            class="text-white red-shadow sm:mt-5 flex flex-col gap-2 list-disc list-inside"
+          >
+            <li>art. 6 ust. 1 lit. a RODO – dobrowolna zgoda użytkownika,</li>
+            <li>
+              art. 6 ust. 1 lit. f RODO – prawnie uzasadniony interes
+              administratora polegający na udzieleniu odpowiedzi na zapytanie.
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            6. Dobrowolność podania danych
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            Podanie danych osobowych jest dobrowolne, ale niezbędne do
+            realizacji celu kontaktowego.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            7. Odbiorcy danych
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            Dane osobowe mogą być przetwarzane przez podmioty świadczące usługi
+            techniczne (np. hosting strony), z którymi zawarto odpowiednie umowy
+            powierzenia.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            8. Czas przechowywania danych
+          </h3>
+          <p
+            class="text-white red-shadow mt-3 sm:text-lg md:text-xl lg:text-2xl font-semibold"
+          >
+            Dane będą przechowywane przez czas potrzebny do odpowiedzi na
+            wiadomość, a następnie mogą być archiwizowane przez okres do 12
+            miesięcy w celach dowodowych.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center items-center px-5 py-5">
+          <h3
+            class="text-red-500 red-shadow font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          >
+            9. Twoje prawa
+          </h3>
+          <p
+            class="text-white mt-3 text-md sm:text-lg md:text-xl lg:text-2xl font-semibold red-shadow"
+          >
+            Masz prawo do:
+          </p>
+          <ul
+            class="text-white red-shadow sm:mt-5 flex flex-col gap-2 list-disc list-inside"
+          >
+            <li>dostępu do swoich danych,</li>
+            <li>ich sprostowania,</li>
+            <li>usunięcia,</li>
+            <li>ograniczenia przetwarzania,</li>
+            <li>wniesienia sprzeciwu,</li>
+            <li>cofnięcia zgody (jeśli była udzielona) w dowolnym momencie,</li>
+            <li>złożenia skargi do Prezesa UODO.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#1e2129] text-white w-full">
+      <div class="container mx-auto py-14 px-6 overflow-hidden box-border">
+        <div class="grid md:grid-cols-12 grid-cols-1 gap-10">
+          <div class="lg:col-span-4 col-span-12">
+            <a href="/">
+              <img
+                class="h-24"
+                src="/src/assets/logo.webp"
+                alt="Logo Adrian Zubrycki"
+              />
+            </a>
+          </div>
+          <div class="lg:col-span-2 md:col-span-4 col-span-12">
+            <h5 class="tracking-wide font-semibold red-shadow">Nawigacja</h5>
+            <ul class="list-none mt-6 space-y-2">
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Strona główna</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Kim jestem?</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Przebieg Współpracy</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Oferta</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 md:col-span-4 col-span-12">
+            <h5 class="tracking-wide font-semibold red-shadow">Poznaj mnie</h5>
+            <ul class="list-none mt-6 space-y-2">
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Metamorfozy</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Gdzie mnie znaleźć?</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Moja historia</a
+                >
+              </li>
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Kontakt</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-3 md:col-span-4 col-span-12">
+            <h5 class="tracking-wide font-semibold red-shadow">
+              Informacje prawne
+            </h5>
+            <ul class="list-none mt-6 space-y-2">
+              <li>
+                <a
+                  href=""
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Polityka Prywatności</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-slate-700">
+        <div
+          class="md:flex md:justify-between md:items-center text-center md:text-left container mx-auto py-7 px-6 space-y-2 md:space-y-0"
+        >
+          <p class="mb-0">
+            &copy; <span id="copyRightYear"></span> Adrian Zubrycki
+          </p>
+          <p class="mb-0 text-sm">
+            Strona stworzona przez
+            <a
+              href=""
+              class="hover:text-red-500 transition-all ease-in-out duration-500"
+              >Patryk Dmochowski</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/61a1475d1e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
