@@ -30,6 +30,12 @@
 #mobileMenu.menu-open a:nth-child(4) {
   transition-delay: 0.2s;
 }
+#mobileMenu.menu-open a:nth-child(5) {
+  transition-delay: 0.25s;
+}
+#mobileMenu.menu-open a:nth-child(6) {
+  transition-delay: 0.3s;
+}
 /* animations */
 @keyframes fadeInRight {
   0% {

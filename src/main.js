@@ -104,3 +104,17 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.forEach((el) => observer.observe(el));
 });
 document.getElementById("copyRightYear").textContent = new Date().getFullYear();
+
+const wiecejBtn = document.getElementById("wiecejButton");
+const dropdown = document.getElementById("dropdownMenu");
+
+wiecejBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdown.classList.toggle("hidden");
+});
+
+document.addEventListener("click", (e) => {
+  if (!dropdown.contains(e.target) && !wiecejBtn.contains(e.target)) {
+    dropdown.classList.add("hidden");
+  }
+});

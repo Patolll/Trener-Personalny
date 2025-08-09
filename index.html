@@ -66,11 +66,48 @@
           >
             <a href="/#kontakt">Kontakt</a>
           </li>
-          <li
-            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
-          >
-            <a href="">Więcej</a>
+          <li class="relative mx-2 px-2 py-2 2xl:mx-4 2xl:px-2">
+            <button
+              id="wiecejButton"
+              class="hover:text-red-500 hover:scale-115 transition-all duration-300 cursor-pointer"
+            >
+              Więcej <i class="fa-solid fa-arrow-down"></i>
+            </button>
+
+            <!-- Dropdown -->
+            <ul
+              id="dropdownMenu"
+              class="hidden absolute top-full left-0 mt-2 flex-col bg-[#1e2129] text-white rounded-xl shadow-lg z-50 min-w-[300px] overflow-hidden text-center text-xl"
+            >
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-20"
+              >
+                <a href="/#oferta" class="block w-full h-full">Oferta</a>
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-20"
+              >
+                <a href="/#gdzie" class="block w-full h-full"
+                  >Gdzie mnie znaleźć?</a
+                >
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-200"
+              >
+                <a href="/page2.html#historia" class="block w-full h-full"
+                  >Moja historia</a
+                >
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-200"
+              >
+                <a href="/page2.html#metamorfozy" class="block w-full h-full"
+                  >Metamorfozy</a
+                >
+              </li>
+            </ul>
           </li>
+
           <li
             class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
           >
@@ -166,9 +203,9 @@
             >Współpraca</a
           >
           <a
-            href="/#kontakt"
+            href="/#gdzie"
             class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
-            >Metamorfozy</a
+            >Gdzie mnie znaleźć?</a
           >
           <a
             href="/#kontakt"
@@ -176,8 +213,19 @@
             >Kontakt</a
           >
           <a
+            href="/page2.html#historia"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Moja historia</a
+          >
+          <a
+            href="/page2.html#metamorfozy"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Metamorfozy</a
+          >
+
+          <a
             href="/#kontakt"
-            class="bg-red-500 w-[80%] mt-auto mb-10 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
+            class="bg-red-500 w-[80%] text-center mt-auto mb-20 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
           >
             Dołącz do mnie
           </a>
@@ -508,57 +556,62 @@
               Formularz kontaktowy
             </h2>
             <form action="">
-              <div class="flex gap-5">
+              <div class="flex flex-col md:flex-row sm:gap-0 md:gap-5">
                 <input
                   type="text"
                   required
-                  class="w-full h-14 shadow-sm text-white text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-8"
-                  placeholder="Imię "
+                  class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
+                  placeholder="Imię"
                 />
                 <input
                   type="text"
                   required
-                  class="w-full h-14 shadow-sm text-white text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-8"
+                  class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
                   placeholder="Nazwisko"
                 />
               </div>
-              <div class="flex gap-5">
+
+              <div class="flex flex-col md:flex-row sm:gap-0 md:gap-5">
                 <input
                   type="email"
                   required
-                  class="w-full h-14 shadow-sm text-white text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-8"
+                  class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
                   placeholder="E-mail"
                 />
                 <input
                   type="tel"
                   required
-                  class="w-full h-14 shadow-sm text-white text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-8"
+                  class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
                   placeholder="Numer telefonu"
                 />
               </div>
+
               <textarea
-                name=""
                 id="wiadomosc"
                 required
-                class="w-full h-48 shadow-sm resize-none text-white placeholder-text-400 text-lg font-semibold leading-7 rounded-2xl border border-red-500 focus:outline-none px-4 py-4 mb-8"
+                class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-48 shadow-sm resize-none text-white text-base sm:text-sm md:text-lg placeholder-text-400 font-semibold leading-7 rounded-2xl border border-red-500 focus:outline-none px-4 py-4 mb-4"
                 placeholder="Wiadomość"
               ></textarea>
-              <div class="flex gap-5">
+
+              <div class="flex flex-col md:flex-row gap-5">
                 <button
+                  type="reset"
                   class="w-full h-12 text-center text-white text-base font-semibold leading-6 rounded-full bg-red-800 shadow transition-all duration-700 hover:bg-red-500 cursor-pointer"
                 >
                   Wyczyść
                 </button>
                 <button
+                  type="submit"
                   class="w-full h-12 text-center text-white text-base font-semibold leading-6 rounded-full bg-red-500 shadow transition-all duration-700 hover:bg-red-800 cursor-pointer"
                 >
                   Wyślij
                 </button>
               </div>
+
               <div class="mt-4">
-                <label class="flex items-start gap-2">
+                <label class="flex items-start gap-2 text-white text-sm">
                   <input type="checkbox" required class="mt-1" />
-                  <span class="text-sm">
+                  <span>
                     Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
                     kontaktu, zgodnie z
                     <a
@@ -573,7 +626,7 @@
           </div>
 
           <div
-            class="relative sm:w-full lg:w-1/4 h-auto lg:h-[550px] p-6 flex flex-col justify-center overflow-hidden text-white rounded-lg"
+            class="relative sm:w-full lg:w-1/2 2xl:w-1/3 h-auto lg:h-[550px] p-6 flex flex-col justify-center overflow-hidden text-white rounded-lg"
           >
             <div
               class="absolute inset-0 bg-[url('/src/assets/logo.webp')] bg-contain bg-center bg-no-repeat opacity-4 z-0"
@@ -642,34 +695,40 @@
                 alt="Logo Adrian Zubrycki"
               />
             </a>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur labore consectetur, illum quae id officiis,
+              reprehenderit, sint suscipit et voluptate nulla deserunt
+              cupiditate qui excepturi at a obcaecati magni cum.
+            </p>
           </div>
           <div class="lg:col-span-2 md:col-span-4 col-span-12">
             <h5 class="tracking-wide font-semibold red-shadow">Nawigacja</h5>
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
+                  href="/"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Strona główna</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="#o-mnie"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Kim jestem?</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="#wspolpraca"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Przebieg Współpracy</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="#oferta"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Oferta</a
                 >
@@ -681,28 +740,28 @@
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
-                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
-                  >Metamorfozy</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
+                  href="#gdzie"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Gdzie mnie znaleźć?</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/page2.html#historia"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Moja historia</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/page2.html#metamorfozy"
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Metamorfozy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#kontakt"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Kontakt</a
                 >

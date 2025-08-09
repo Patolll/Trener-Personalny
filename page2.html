@@ -185,7 +185,7 @@
       </nav>
     </header>
     <main class="bg-[#12151a] w-full min-h-screen text-black">
-      <section class="antialiased pt-10">
+      <section class="antialiased pt-10" id="historia">
         <div class="relative container mx-auto px-6 flex flex-col space-y-8">
           <div
             class="absolute w-2 z-0 h-full bg-white shadow-md left-17 inset-0 md:mx-auto md:right-0 md:left-0"
@@ -215,116 +215,115 @@
     </main>
     <!-- Metamorfozy section -->
     <!-- <section
-        id="metamorfozy"
-        class="bg-[#12151a] text-white px-4 sm:px-6 md:px-10 lg:px-16 lg:mt-50"
+      id="metamorfozy"
+      class="bg-[#12151a] text-white px-4 sm:px-6 md:px-10 lg:px-16 lg:mt-50"
+    >
+      <h2
+        class="text-center red-shadow font-bold mb-12 text-xl sm:text-2xl md:text-3xl lg:text-5xl fade-in-down lg:mb-20"
       >
-        <h2
-          class="text-center red-shadow font-bold mb-12 text-xl sm:text-2xl md:text-3xl lg:text-5xl fade-in-down lg:mb-20"
-        >
-          Przemiany moich podopiecznych
-        </h2>
+        Przemiany moich podopiecznych
+      </h2>
+      <div
+        class="grid gap-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-10 place-items-center"
+      >
+        metamorfoza 1
         <div
-          class="grid gap-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-10 place-items-center"
+          class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
         >
-         metamorfoza 1 
-          <div
-            class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
-          >
-            <img
-              class="w-full rounded-xl border-2 border-red-500"
-              src="/src/assets/metamorfozy/metamorfoza1.webp"
-              alt="Metamorfoza Adama"
-            />
-            <div class="px-6 py-4 bg-[#1a1d23]">
-              <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
-              <p class="text-white text-lg red-shadow">
-                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
-                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
-                i dobrze dobranemu planowi.
-              </p>
-            </div>
-            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >1 rok</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-15 kg</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-30 cm</span
-              >
-            </div>
+          <img
+            class="w-full rounded-xl border-2 border-red-500"
+            src="/src/assets/metamorfozy/metamorfoza1.webp"
+            alt="Metamorfoza Adama"
+          />
+          <div class="px-6 py-4 bg-[#1a1d23]">
+            <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
+            <p class="text-white text-lg red-shadow">
+              Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją sylwetkę,
+              siłę oraz pewność siebie. Wszystko dzięki konsekwencji i dobrze
+              dobranemu planowi.
+            </p>
           </div>
-      metamorfoza 2  
-          <div
-            class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
-          >
-            <img
-              class="w-full rounded-xl border-2 border-red-500"
-              src="/src/assets/metamorfozy/metamorfoza2.webp"
-              alt="Metamorfoza Michała"
-            />
-            <div class="px-6 py-4 bg-[#1a1d23]">
-              <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
-              <p class="text-white text-lg red-shadow">
-                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
-                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
-                i dobrze dobranemu planowi.
-              </p>
-            </div>
-            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >1 rok</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-15 kg</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-30 cm</span
-              >
-            </div>
-          </div>
-      metamorfoza 3
-          <div
-            class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
-          >
-            <img
-              class="w-full rounded-xl border-2 border-red-500"
-              src="/src/assets/metamorfozy/metamorfoza4.webp"
-              alt="Metamorfoza Olka"
-            />
-            <div class="px-6 py-4 bg-[#1a1d23]">
-              <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
-              <p class="text-white text-lg red-shadow">
-                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
-                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
-                i dobrze dobranemu planowi.
-              </p>
-            </div>
-            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >1 rok</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-15 kg</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-30 cm</span
-              >
-            </div>
+          <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >1 rok</span
+            >
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >-15 kg</span
+            >
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >-30 cm</span
+            >
           </div>
         </div>
-      </section>
- 
+        metamorfoza 2
+        <div
+          class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
+        >
+          <img
+            class="w-full rounded-xl border-2 border-red-500"
+            src="/src/assets/metamorfozy/metamorfoza2.webp"
+            alt="Metamorfoza Michała"
+          />
+          <div class="px-6 py-4 bg-[#1a1d23]">
+            <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
+            <p class="text-white text-lg red-shadow">
+              Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją sylwetkę,
+              siłę oraz pewność siebie. Wszystko dzięki konsekwencji i dobrze
+              dobranemu planowi.
+            </p>
+          </div>
+          <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >1 rok</span
+            >
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >-15 kg</span
+            >
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >-30 cm</span
+            >
+          </div>
+        </div>
+        metamorfoza 3
+        <div
+          class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
+        >
+          <img
+            class="w-full rounded-xl border-2 border-red-500"
+            src="/src/assets/metamorfozy/metamorfoza4.webp"
+            alt="Metamorfoza Olka"
+          />
+          <div class="px-6 py-4 bg-[#1a1d23]">
+            <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
+            <p class="text-white text-lg red-shadow">
+              Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją sylwetkę,
+              siłę oraz pewność siebie. Wszystko dzięki konsekwencji i dobrze
+              dobranemu planowi.
+            </p>
+          </div>
+          <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >1 rok</span
+            >
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >-15 kg</span
+            >
+            <span
+              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+              >-30 cm</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="bg-[#1e2129] text-white w-full">
       <div class="container mx-auto py-14 px-6 overflow-hidden box-border">
