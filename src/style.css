@@ -281,6 +281,3 @@ textarea:-webkit-autofill {
   box-shadow: 0 0 0px 1000px #12151a inset !important;
   -webkit-text-fill-color: white !important;
 }
-@theme {
-  --breakpoint-xs: 480px;
-}

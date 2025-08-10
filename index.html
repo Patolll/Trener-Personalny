@@ -32,7 +32,7 @@
     <title>Adrian Zubrycki - Trener personalny</title>
   </head>
 
-  <body class="font-[montserrat]">
+  <body class="font-[montserrat] overflow-x-hidden">
     <header id="mainHeader" class="w-full bg-[#12151a] z-50">
       <!-- navigation -->
       <nav class="w-full flex justify-center px-6">
@@ -233,6 +233,13 @@
       </nav>
     </header>
     <main class="bg-[#12151a] w-full min-h-screen text-white">
+      <div class="hidden lg:flex fixed right-10 bottom-10 z-10">
+        <a
+          href="#mainHeader"
+          class="hover:text-red-500 duration-500 ease-in-out"
+          ><i class="fa-solid fa-arrow-up fa-2xl"></i
+        ></a>
+      </div>
       <!-- Hero Section -->
       <section
         class="w-full min-h-[70vh] flex flex-col xl:flex-row items-center gap-5 xl:gap-0 justify-center"
@@ -248,9 +255,7 @@
             <span class="text-red-500"> Twoim nowym</span> trenerem
             Personalnym<br />
           </h2>
-          <p
-            class="text-xl md:text-3xl mb-8 red-shadow text-gray-300 fade-in-up"
-          >
+          <p class="text-xl md:text-3xl mb-8 text-gray-300 fade-in-up">
             Pomagam zmieniać sylwetki i podejście do zdrowia. <br />Dołącz i
             zacznij swoją metamorfozę już dziś!
           </p>
@@ -307,7 +312,7 @@
           </div>
           <div class="lg:w-3/4 px-5 py-5">
             <p
-              class="text-lg lg:text-4xl text-white font-semibold fade-in-right red-shadow"
+              class="text-lg lg:text-4xl text-white font-semibold fade-in-right"
             >
               Cześć! Nazywam się
               <span class="text-red-500">Adrian Zubrycki</span> i jestem
@@ -557,9 +562,32 @@
             >
               Formularz kontaktowy
             </h2>
-            <form action="">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="a060ea84-71a7-45b1-8e1e-4e0b528bb86d"
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="Nowa wiadomość ze strony internetowej"
+              />
+              <input
+                type="hidden"
+                name="from_name"
+                value="Adrian-Zubrycki.pl"
+              />
+              <input type="hidden" name="redirect" value="/thankyou.html" />
               <div class="flex flex-col md:flex-row sm:gap-0 md:gap-5">
                 <input
+                  name="Imię"
                   type="text"
                   required
                   class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
@@ -567,6 +595,7 @@
                 />
                 <input
                   type="text"
+                  name="Nazwisko"
                   required
                   class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
                   placeholder="Nazwisko"
@@ -576,12 +605,14 @@
               <div class="flex flex-col md:flex-row sm:gap-0 md:gap-5">
                 <input
                   type="email"
+                  name="E-mail"
                   required
                   class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
                   placeholder="E-mail"
                 />
                 <input
                   type="tel"
+                  name="Numer telefonu"
                   required
                   class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-14 shadow-sm text-white text-base sm:text-sm md:text-lg font-semibold leading-7 rounded-full border border-red-500 focus:outline-none py-2 px-4 mb-4"
                   placeholder="Numer telefonu"
@@ -591,6 +622,7 @@
               <textarea
                 id="wiadomosc"
                 required
+                name="Wiadomość"
                 class="focus:ring-2 focus:ring-red-500 focus:border-red-500 w-full h-48 shadow-sm resize-none text-white text-base sm:text-sm md:text-lg placeholder-text-400 font-semibold leading-7 rounded-2xl border border-red-500 focus:outline-none px-4 py-4 mb-4"
                 placeholder="Wiadomość"
               ></textarea>
@@ -612,7 +644,7 @@
 
               <div class="mt-4">
                 <label class="flex items-start gap-2 text-white text-sm">
-                  <input type="checkbox" required class="mt-1" />
+                  <input type="checkbox" name="zgoda" required class="mt-1" />
                   <span>
                     Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
                     kontaktu, zgodnie z
@@ -628,7 +660,7 @@
           </div>
 
           <div
-            class="relative sm:w-full lg:w-1/2 2xl:w-1/3 h-auto lg:h-[550px] p-6 flex flex-col justify-center overflow-hidden text-white rounded-lg"
+            class="relative sm:w-full lg:w-1/2 2xl:w-1/3 h-auto lg:h-[550px] p-6 flex flex-col justify-center overflow-hidden text-white rounded-lg fade-in-down"
           >
             <div
               class="absolute inset-0 bg-[url('/src/assets/logo.webp')] bg-contain bg-center bg-no-repeat opacity-4 z-0"

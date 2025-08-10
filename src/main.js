@@ -118,3 +118,10 @@ document.addEventListener("click", (e) => {
     dropdown.classList.add("hidden");
   }
 });
+
+const dropdownLinks = dropdown.querySelectorAll("a");
+dropdownLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    dropdown.classList.add("hidden");
+  });
+});
