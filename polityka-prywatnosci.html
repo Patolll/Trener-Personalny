@@ -64,13 +64,50 @@
           <li
             class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
           >
-            <a href="/#metamorfozy">Metamorfozy</a>
-          </li>
-          <li
-            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
-          >
             <a href="/#kontakt">Kontakt</a>
           </li>
+          <li class="relative mx-2 px-2 py-2 2xl:mx-4 2xl:px-2">
+            <button
+              id="wiecejButton"
+              class="hover:text-red-500 hover:scale-115 transition-all duration-300 cursor-pointer"
+            >
+              Więcej <i class="fa-solid fa-arrow-down"></i>
+            </button>
+
+            <!-- Dropdown -->
+            <ul
+              id="dropdownMenu"
+              class="hidden absolute top-full left-0 mt-2 flex-col bg-[#1e2129] text-white rounded-xl shadow-lg z-50 min-w-[300px] overflow-hidden text-center text-xl"
+            >
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-20"
+              >
+                <a href="/#oferta" class="block w-full h-full">Oferta</a>
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-20"
+              >
+                <a href="/#gdzie" class="block w-full h-full"
+                  >Gdzie mnie znaleźć?</a
+                >
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-200"
+              >
+                <a href="/page2.html#historia" class="block w-full h-full"
+                  >Moja historia</a
+                >
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-200"
+              >
+                <a href="/page2.html#metamorfozy" class="block w-full h-full"
+                  >Metamorfozy</a
+                >
+              </li>
+            </ul>
+          </li>
+
           <li
             class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
           >
@@ -166,9 +203,9 @@
             >Współpraca</a
           >
           <a
-            href="/#kontakt"
+            href="/#gdzie"
             class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
-            >Metamorfozy</a
+            >Gdzie mnie znaleźć?</a
           >
           <a
             href="/#kontakt"
@@ -176,8 +213,19 @@
             >Kontakt</a
           >
           <a
+            href="/page2.html#historia"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Moja historia</a
+          >
+          <a
+            href="/page2.html#metamorfozy"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Metamorfozy</a
+          >
+
+          <a
             href="/#kontakt"
-            class="bg-red-500 w-[80%] mt-auto mb-10 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
+            class="bg-red-500 w-[80%] text-center mt-auto mb-20 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
           >
             Dołącz do mnie
           </a>
@@ -363,34 +411,40 @@
                 alt="Logo Adrian Zubrycki"
               />
             </a>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur labore consectetur, illum quae id officiis,
+              reprehenderit, sint suscipit et voluptate nulla deserunt
+              cupiditate qui excepturi at a obcaecati magni cum.
+            </p>
           </div>
           <div class="lg:col-span-2 md:col-span-4 col-span-12">
             <h5 class="tracking-wide font-semibold red-shadow">Nawigacja</h5>
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
+                  href="/"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Strona główna</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/index.html#omnie"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Kim jestem?</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/index.html#wspolpraca"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Przebieg Współpracy</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/index.html#oferta"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Oferta</a
                 >
@@ -402,28 +456,28 @@
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
-                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
-                  >Metamorfozy</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
+                  href="/index.html#gdzie"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Gdzie mnie znaleźć?</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/page2.html#historia"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Moja historia</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/page2.html#metamorfozy"
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Metamorfozy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/index.html#kontakt"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Kontakt</a
                 >
@@ -437,7 +491,7 @@
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
+                  href="/polityka-prywatnosci.html"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Polityka Prywatności</a
                 >
@@ -456,7 +510,7 @@
           <p class="mb-0 text-sm">
             Strona stworzona przez
             <a
-              href=""
+              href="/page2.html"
               class="hover:text-red-500 transition-all ease-in-out duration-500"
               >Patryk Dmochowski</a
             >

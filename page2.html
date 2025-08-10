@@ -2,25 +2,30 @@
 <html lang="pl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/src/assets/logo.ico" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <title>Adrian Zubrycki - Trener personalny | Treningi i metamorfozy</title>
     <meta
       name="description"
-      content="Adrian Zubrycki - Trener personalny pomagający osiągnąć Twoje cele sylwetkowe. Sprawdź ofertę współpracy, metamorfozy i kontakt."
+      content="Adrian Zubrycki – certyfikowany trener personalny. Oferuję treningi online i stacjonarne, indywidualne plany dietetyczne oraz spektakularne metamorfozy moich podopiecznych."
     />
     <meta
       name="keywords"
-      content="trener personalny, treningi online, metamorfozy, dieta, sylwetka, siłownia, Adrian Zubrycki"
+      content="Adrian Zubrycki, trener personalny, trening personalny, trening online, metamorfozy, dieta, odchudzanie, siłownia, budowanie masy mięśniowej"
     />
     <meta name="author" content="Adrian Zubrycki" />
+
     <meta property="og:title" content="Adrian Zubrycki - Trener personalny" />
     <meta
       property="og:description"
-      content="Pomagam osiągać cele sylwetkowe. Zobacz efekty i dołącz do współpracy!"
+      content="Pomagam osiągnąć Twoje cele sylwetkowe – zobacz metamorfozy klientów i rozpocznij swoją przemianę."
     />
     <meta
       property="og:image"
@@ -29,7 +34,16 @@
     <meta property="og:url" content="https://patryk-test.rf.gd/" />
     <meta property="og:type" content="website" />
 
-    <title>Adrian Zubrycki - Trener personalny</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adrian Zubrycki - Trener personalny" />
+    <meta
+      name="twitter:description"
+      content="Treningi personalne, plany dietetyczne i spektakularne metamorfozy – zobacz efekty moich podopiecznych."
+    />
+    <meta
+      name="twitter:image"
+      content="https://patryk-test.rf.gd/assets/logo.webp"
+    />
   </head>
 
   <body class="font-[montserrat]">
@@ -64,13 +78,50 @@
           <li
             class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
           >
-            <a href="/#metamorfozy">Metamorfozy</a>
-          </li>
-          <li
-            class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
-          >
             <a href="/#kontakt">Kontakt</a>
           </li>
+          <li class="relative mx-2 px-2 py-2 2xl:mx-4 2xl:px-2">
+            <button
+              id="wiecejButton"
+              class="hover:text-red-500 hover:scale-115 transition-all duration-300 cursor-pointer"
+            >
+              Więcej <i class="fa-solid fa-arrow-down"></i>
+            </button>
+
+            <!-- Dropdown -->
+            <ul
+              id="dropdownMenu"
+              class="hidden absolute top-full left-0 mt-2 flex-col bg-[#1e2129] text-white rounded-xl shadow-lg z-50 min-w-[300px] overflow-hidden text-center text-xl"
+            >
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-20"
+              >
+                <a href="/#oferta" class="block w-full h-full">Oferta</a>
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-20"
+              >
+                <a href="/#gdzie" class="block w-full h-full"
+                  >Gdzie mnie znaleźć?</a
+                >
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-200"
+              >
+                <a href="/page2.html#historia" class="block w-full h-full"
+                  >Moja historia</a
+                >
+              </li>
+              <li
+                class="px-4 py-4 hover:bg-[#292d38] transition-colors duration-200"
+              >
+                <a href="/page2.html#metamorfozy" class="block w-full h-full"
+                  >Metamorfozy</a
+                >
+              </li>
+            </ul>
+          </li>
+
           <li
             class="mx-2 px-2 py-2 2xl:mx-4 2xl:px-2 hover:text-red-500 hover:scale-115 transition-all duration-300"
           >
@@ -166,9 +217,9 @@
             >Współpraca</a
           >
           <a
-            href="/#kontakt"
+            href="/#gdzie"
             class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
-            >Metamorfozy</a
+            >Gdzie mnie znaleźć?</a
           >
           <a
             href="/#kontakt"
@@ -176,155 +227,216 @@
             >Kontakt</a
           >
           <a
+            href="/page2.html#historia"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Moja historia</a
+          >
+          <a
+            href="/page2.html#metamorfozy"
+            class="py-3 w-full text-center opacity-0 -translate-y-5 transition-all duration-300 pointer-events-none"
+            >Metamorfozy</a
+          >
+
+          <a
             href="/#kontakt"
-            class="bg-red-500 w-[80%] mt-auto mb-10 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
+            class="bg-red-500 w-[80%] text-center mt-auto mb-20 text-white px-5 py-3 rounded-2xl hover:bg-red-600 transition-colors duration-500"
           >
             Dołącz do mnie
           </a>
         </div>
       </nav>
     </header>
-    <main class="bg-[#12151a] w-full min-h-screen text-black">
-      <section class="antialiased pt-10" id="historia">
-        <div class="relative container mx-auto px-6 flex flex-col space-y-8">
+    <main class="bg-[#12151a] w-full min-h-screen text-white">
+      <section id="historia" class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold text-center mb-16 red-shadow">
+          Moja historia
+        </h2>
+
+        <!-- Blok 1 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div
-            class="absolute w-2 z-0 h-full bg-white shadow-md left-17 inset-0 md:mx-auto md:right-0 md:left-0"
-          ></div>
-          <div class="relative z-10">
+            class="flex items-center justify-center bg-black rounded-2xl shadow-lg h-[400px] overflow-hidden"
+          >
             <img
               src="/src/assets/trener/adi1.webp"
-              alt="Adrian"
-              class="h-24 w-24 object-cover rounded-full shadow-md border-4 border-white xs:absolute md:mx-auto md:left-0 md:right-0"
+              alt="Trener personalny"
+              class="max-h-full max-w-full object-contain transform transition duration-500 hover:scale-105"
             />
-            <div class="relative pt-2 xs:pl-28 xs:pt-0">
-              <div
-                aria-hidden="true"
-                class="h-4 w-4 transform rotate-45 bg-white absolute inset-0 left-10 xs:top-11 xs:left-26 md:left-14"
-              ></div>
-              <div
-                class="bg-white p-6 rounded-md shadow-md md:w-1/2 md:ml-auto md:pl-16"
+          </div>
+          <div>
+            <p class="text-lg leading-relaxed mb-4">
+              Cześć! Mam na imię <span class="text-red-500">Adrian</span> i od
+              ponad 8 lat pomagam ludziom osiągać swoje cele fitness. Moja
+              przygoda z siłownią zaczęła się, gdy sam chciałem poprawić swoją
+              kondycję i sylwetkę.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Z czasem pasja przerodziła się w sposób na życie. Dziś mogę łączyć
+              pracę z tym, co kocham najbardziej.
+            </p>
+          </div>
+        </div>
+
+        <!-- Blok 2 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div class="order-2 md:order-1">
+            <p class="text-lg leading-relaxed mb-4">
+              W pracy trenera stawiam na indywidualne podejście i realne cele.
+              Nie wierzę w uniwersalne plany — każdy potrzebuje programu
+              dopasowanego do siebie.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Oprócz treningu, skupiam się także na edukacji w zakresie zdrowego
+              odżywiania i regeneracji.
+            </p>
+          </div>
+          <div
+            class="order-1 md:order-2 flex items-center justify-center bg-black rounded-2xl shadow-lg h-[400px] overflow-hidden"
+          >
+            <img
+              src="/src/assets/trener/adi2.webp"
+              alt="Trening personalny"
+              class="max-h-full max-w-full object-contain transform transition duration-500 hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <!-- Blok 3 -->
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div
+            class="flex items-center justify-center bg-black rounded-2xl shadow-lg h-[400px] overflow-hidden"
+          >
+            <img
+              src="/src/assets/trener/adi3.webp"
+              alt="Motywacja"
+              class="max-h-full max-w-full object-contain transform transition duration-500 hover:scale-105"
+            />
+          </div>
+          <div>
+            <p class="text-lg leading-relaxed mb-4">
+              Pomagam zarówno początkującym, jak i zawodowym sportowcom.
+              Wspólnie pracujemy nad sylwetką, siłą i zdrowiem.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Twoja przemiana może zacząć się już dziś — wystarczy pierwszy
+              krok.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metamorfozy section -->
+      <section
+        id="metamorfozy"
+        class="bg-[#12151a] text-white px-4 sm:px-6 md:px-10 lg:px-16 pb-20"
+      >
+        <h2
+          class="text-center red-shadow font-bold mb-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl fade-in-down lg:mb-20"
+        >
+          Przemiany moich podopiecznych
+        </h2>
+        <div
+          class="grid gap-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-10 place-items-center"
+        >
+          <!-- metamorfoza 1 -->
+          <div
+            class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
+          >
+            <img
+              class="w-full rounded-xl border-2 border-red-500"
+              src="/src/assets/metamorfozy/metamorfoza1.webp"
+              alt="Metamorfoza Adama"
+            />
+            <div class="px-6 py-4 bg-[#1a1d23]">
+              <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
+              <p class="text-white text-lg red-shadow">
+                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
+                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
+                i dobrze dobranemu planowi.
+              </p>
+            </div>
+            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >1 rok</span
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Debitis illo numquam ratione id quis cum odit perspiciatis quo,
-                architecto quas.
-              </div>
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >-15 kg</span
+              >
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >-30 cm</span
+              >
+            </div>
+          </div>
+          <!-- metamorfoza 2 -->
+          <div
+            class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
+          >
+            <img
+              class="w-full rounded-xl border-2 border-red-500"
+              src="/src/assets/metamorfozy/metamorfoza2.webp"
+              alt="Metamorfoza Michała"
+            />
+            <div class="px-6 py-4 bg-[#1a1d23]">
+              <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
+              <p class="text-white text-lg red-shadow">
+                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
+                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
+                i dobrze dobranemu planowi.
+              </p>
+            </div>
+            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >1 rok</span
+              >
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >-15 kg</span
+              >
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >-30 cm</span
+              >
+            </div>
+          </div>
+          <!-- metamorfoza 3 -->
+          <div
+            class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
+          >
+            <img
+              class="w-full rounded-xl border-2 border-red-500"
+              src="/src/assets/metamorfozy/metamorfoza4.webp"
+              alt="Metamorfoza Olka"
+            />
+            <div class="px-6 py-4 bg-[#1a1d23]">
+              <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
+              <p class="text-white text-lg red-shadow">
+                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
+                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
+                i dobrze dobranemu planowi.
+              </p>
+            </div>
+            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >1 rok</span
+              >
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >-15 kg</span
+              >
+              <span
+                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                >-30 cm</span
+              >
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!-- Metamorfozy section -->
-    <!-- <section
-      id="metamorfozy"
-      class="bg-[#12151a] text-white px-4 sm:px-6 md:px-10 lg:px-16 lg:mt-50"
-    >
-      <h2
-        class="text-center red-shadow font-bold mb-12 text-xl sm:text-2xl md:text-3xl lg:text-5xl fade-in-down lg:mb-20"
-      >
-        Przemiany moich podopiecznych
-      </h2>
-      <div
-        class="grid gap-8 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-10 place-items-center"
-      >
-        metamorfoza 1
-        <div
-          class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
-        >
-          <img
-            class="w-full rounded-xl border-2 border-red-500"
-            src="/src/assets/metamorfozy/metamorfoza1.webp"
-            alt="Metamorfoza Adama"
-          />
-          <div class="px-6 py-4 bg-[#1a1d23]">
-            <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
-            <p class="text-white text-lg red-shadow">
-              Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją sylwetkę,
-              siłę oraz pewność siebie. Wszystko dzięki konsekwencji i dobrze
-              dobranemu planowi.
-            </p>
-          </div>
-          <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >1 rok</span
-            >
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >-15 kg</span
-            >
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >-30 cm</span
-            >
-          </div>
-        </div>
-        metamorfoza 2
-        <div
-          class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
-        >
-          <img
-            class="w-full rounded-xl border-2 border-red-500"
-            src="/src/assets/metamorfozy/metamorfoza2.webp"
-            alt="Metamorfoza Michała"
-          />
-          <div class="px-6 py-4 bg-[#1a1d23]">
-            <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
-            <p class="text-white text-lg red-shadow">
-              Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją sylwetkę,
-              siłę oraz pewność siebie. Wszystko dzięki konsekwencji i dobrze
-              dobranemu planowi.
-            </p>
-          </div>
-          <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >1 rok</span
-            >
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >-15 kg</span
-            >
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >-30 cm</span
-            >
-          </div>
-        </div>
-        metamorfoza 3
-        <div
-          class="max-w-2xl rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
-        >
-          <img
-            class="w-full rounded-xl border-2 border-red-500"
-            src="/src/assets/metamorfozy/metamorfoza4.webp"
-            alt="Metamorfoza Olka"
-          />
-          <div class="px-6 py-4 bg-[#1a1d23]">
-            <div class="font-bold text-xl mb-2 text-red-500">Adam</div>
-            <p class="text-white text-lg red-shadow">
-              Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją sylwetkę,
-              siłę oraz pewność siebie. Wszystko dzięki konsekwencji i dobrze
-              dobranemu planowi.
-            </p>
-          </div>
-          <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >1 rok</span
-            >
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >-15 kg</span
-            >
-            <span
-              class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-              >-30 cm</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
     <footer class="bg-[#1e2129] text-white w-full">
       <div class="container mx-auto py-14 px-6 overflow-hidden box-border">
         <div class="grid md:grid-cols-12 grid-cols-1 gap-10">
@@ -336,34 +448,40 @@
                 alt="Logo Adrian Zubrycki"
               />
             </a>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur labore consectetur, illum quae id officiis,
+              reprehenderit, sint suscipit et voluptate nulla deserunt
+              cupiditate qui excepturi at a obcaecati magni cum.
+            </p>
           </div>
           <div class="lg:col-span-2 md:col-span-4 col-span-12">
             <h5 class="tracking-wide font-semibold red-shadow">Nawigacja</h5>
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
+                  href="/"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Strona główna</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/index.html#omnie"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Kim jestem?</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/index.html#wspolpraca"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Przebieg Współpracy</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/index.html#oferta"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Oferta</a
                 >
@@ -375,28 +493,28 @@
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
-                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
-                  >Metamorfozy</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
+                  href="/index.html#gdzie"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Gdzie mnie znaleźć?</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/page2.html#historia"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Moja historia</a
                 >
               </li>
               <li>
                 <a
-                  href=""
+                  href="/page2.html#metamorfozy"
+                  class="hover:text-red-500 transition-all duration-500 ease-in-out"
+                  >Metamorfozy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/index.html#kontakt"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Kontakt</a
                 >
@@ -410,7 +528,7 @@
             <ul class="list-none mt-6 space-y-2">
               <li>
                 <a
-                  href=""
+                  href="/polityka-prywatnosci.html"
                   class="hover:text-red-500 transition-all duration-500 ease-in-out"
                   >Polityka Prywatności</a
                 >
@@ -429,14 +547,14 @@
           <p class="mb-0 text-sm">
             Strona stworzona przez
             <a
-              href=""
+              href="/page2.html"
               class="hover:text-red-500 transition-all ease-in-out duration-500"
               >Patryk Dmochowski</a
             >
           </p>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script type="module" src="/src/main.js"></script>
     <script
