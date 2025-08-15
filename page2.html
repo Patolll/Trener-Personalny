@@ -322,7 +322,7 @@
 
       <!-- Metamorfozy section -->
       <section
-        id="metamorfozy"
+        aria-label="Metamorfozy"
         class="bg-[#12151a] text-white px-2 sm:px-4 md:px-8 lg:px-12 pb-20"
       >
         <h2
@@ -330,111 +330,173 @@
         >
           Przemiany moich podopiecznych
         </h2>
-        <div
-          class="grid gap-15 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-10 place-items-center"
-        >
-          <!-- metamorfoza 1 -->
-          <div
-            class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
+
+        <div class="relative max-w-7xl mx-auto">
+          <!-- Strzałka lewa -->
+          <button
+            id="prevBtn"
+            class="absolute left-0 top-1/2 -translate-x-15 cursor-pointer hover:bg-red-800 duration-500 transition-all -translate-y-1/2 bg-red-500 w-12 h-12 flex items-center justify-center rounded-full z-10"
           >
-            <img
-              class="w-full rounded-xl border-2 border-red-500"
-              src="/src/assets/metamorfozy/metamorfoza1.webp"
-              alt="Metamorfoza Adama"
-            />
-            <div class="px-6 py-4 bg-[#1a1d23]">
-              <div class="font-bold text-xl mb-2 text-red-500 red-shadow">
-                Adam
+            &#10094;
+          </button>
+
+          <div class="overflow-hidden">
+            <div id="karuzela" class="flex transition-all duration-500">
+              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+                <div
+                  class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
+                >
+                  <img
+                    src="/src/assets/metamorfozy/metamorfoza1.webp"
+                    alt="Metamorfoza Adama"
+                    class="w-full rounded-xl border-red-500 border-2"
+                  />
+                  <div class="p-6 py-4 bg-[#1a1d23]">
+                    <h5 class="font-bold text-xl mb-2 text-red-500 red-shadow">
+                      Adam
+                    </h5>
+                    <p class="text-white text-lg">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Non sit explicabo delectus? Fugit qui, alias distinctio
+                      nesciunt saepe hic eos quo officia temporibus dolores fuga
+                      veritatis, illo corporis! Modi, vel.
+                    </p>
+                  </div>
+                  <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >1 rok</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-15 kg</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-30 cm</span
+                    >
+                  </div>
+                </div>
               </div>
-              <p class="text-white text-lg">
-                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
-                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
-                i dobrze dobranemu planowi.
-              </p>
-            </div>
-            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >1 rok</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-15 kg</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-30 cm</span
-              >
+              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+                <div
+                  class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
+                >
+                  <img
+                    src="/src/assets/metamorfozy/metamorfoza2.webp"
+                    alt="Metamorfoza Adama"
+                    class="w-full rounded-xl border-red-500 border-2"
+                  />
+                  <div class="p-6 py-4 bg-[#1a1d23]">
+                    <h5 class="font-bold text-xl mb-2 text-red-500 red-shadow">
+                      Adam
+                    </h5>
+                    <p class="text-white text-lg">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nulla qui molestias magni exercitationem, nihil
+                      dignissimos. Nostrum optio iure cumque quidem. Vitae
+                      distinctio ad eveniet, illo quibusdam nesciunt iste ullam
+                      iusto.
+                    </p>
+                  </div>
+                  <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >1 rok</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-15 kg</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-30 cm</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+                <div
+                  class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
+                >
+                  <img
+                    src="/src/assets/metamorfozy/metamorfoza3.webp"
+                    alt="Metamorfoza Adama"
+                    class="w-full rounded-xl border-red-500 border-2"
+                  />
+                  <div class="p-6 py-4 bg-[#1a1d23]">
+                    <h5 class="font-bold text-xl mb-2 text-red-500 red-shadow">
+                      Adam
+                    </h5>
+                    <p class="text-white text-lg">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Tempora, ipsa. Repellat, nam omnis laboriosam id
+                      architecto eum nulla natus exercitationem atque excepturi
+                      perspiciatis. Quod a exercitationem inventore fugiat
+                      laboriosam vitae!
+                    </p>
+                  </div>
+                  <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >1 rok</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-15 kg</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-30 cm</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+                <div
+                  class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
+                >
+                  <img
+                    src="/src/assets/metamorfozy/metamorfoza4.webp"
+                    alt="Metamorfoza Adama"
+                    class="w-full rounded-xl border-red-500 border-2"
+                  />
+                  <div class="p-6 py-4 bg-[#1a1d23]">
+                    <h5 class="font-bold text-xl mb-2 text-red-500 red-shadow">
+                      Adam
+                    </h5>
+                    <p class="text-white text-lg">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Tempora, ipsa. Repellat, nam omnis laboriosam id
+                      architecto eum nulla natus exercitationem atque excepturi
+                      perspiciatis. Quod a exercitationem inventore fugiat
+                      laboriosam vitae!
+                    </p>
+                  </div>
+                  <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >1 rok</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-15 kg</span
+                    >
+                    <span
+                      class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
+                      >-30 cm</span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- metamorfoza 2 -->
-          <div
-            class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
+          <button
+            id="nextBtn"
+            class="absolute right-0 top-1/2 translate-x-15 cursor-pointer hover:bg-red-800 duration-500 transition-all -translate-y-1/2 bg-red-500 w-12 h-12 flex items-center justify-center rounded-full z-10"
           >
-            <img
-              class="w-full rounded-xl border-2 border-red-500"
-              src="/src/assets/metamorfozy/metamorfoza2.webp"
-              alt="Metamorfoza Michała"
-            />
-            <div class="px-6 py-4 bg-[#1a1d23]">
-              <div class="font-bold text-xl mb-2 text-red-500 red-shadow">
-                Adam
-              </div>
-              <p class="text-white text-lg">
-                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
-                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
-                i dobrze dobranemu planowi.
-              </p>
-            </div>
-            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >1 rok</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-15 kg</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-30 cm</span
-              >
-            </div>
-          </div>
-          <!-- metamorfoza 3 -->
-          <div
-            class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300 transition-all"
-          >
-            <img
-              class="w-full rounded-xl border-2 border-red-500"
-              src="/src/assets/metamorfozy/metamorfoza4.webp"
-              alt="Metamorfoza Olka"
-            />
-            <div class="px-6 py-4 bg-[#1a1d23]">
-              <div class="font-bold text-xl mb-2 text-red-500 red-shadow">
-                Adam
-              </div>
-              <p class="text-white text-lg">
-                Adam zredukował 6 kg tłuszczu i znacząco poprawił swoją
-                sylwetkę, siłę oraz pewność siebie. Wszystko dzięki konsekwencji
-                i dobrze dobranemu planowi.
-              </p>
-            </div>
-            <div class="flex flex-row justify-center gap-5 bg-[#1a1d23]">
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >1 rok</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-15 kg</span
-              >
-              <span
-                class="inline-block bg-red-500 rounded-xl px-5 py-3 text-md font-semibold text-white"
-                >-30 cm</span
-              >
-            </div>
-          </div>
+            &#10095;
+          </button>
         </div>
       </section>
     </main>
@@ -557,7 +619,7 @@
       </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/page2.js"></script>
     <script
       src="https://kit.fontawesome.com/61a1475d1e.js"
       crossorigin="anonymous"
