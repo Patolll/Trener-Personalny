@@ -247,9 +247,18 @@
       </nav>
     </header>
     <main class="bg-[#12151a] w-full min-h-screen text-white">
+      <div class="hidden lg:flex fixed right-10 bottom-10 z-10">
+        <a
+          href="#mainHeader"
+          class="hover:text-red-500 duration-500 ease-in-out"
+          ><i class="fa-solid fa-arrow-up fa-2xl"></i
+        ></a>
+      </div>
       <!-- History section -->
       <section id="historia" class="max-w-6xl mx-auto px-6 py-16">
-        <h2 class="text-4xl font-bold text-center mb-16 red-shadow">
+        <h2
+          class="text-4xl font-bold text-center mb-16 red-shadow fade-in-down"
+        >
           Moja historia
         </h2>
 
@@ -257,21 +266,19 @@
         <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div class="flex items-center justify-center">
             <img
-              src="/src/assets/trener/adi1.webp"
+              src="/src/assets/trener/sesja.webp"
               alt="Trener personalny"
-              class="transition duration-500 hover:scale-105 h-[400px] border-2 border-red-500 rounded-lg hover:shadow-lg shadow-red-900"
+              class="transition duration-500 hover:scale-105 hover:-rotate-1 w-full max-h-[500px] object-cover border-2 border-red-500 rounded-lg hover:shadow-xl shadow-red-900 fade-in-left"
             />
           </div>
           <div>
-            <p class="text-lg leading-relaxed mb-4">
-              Cześć! Mam na imię <span class="text-red-500">Adrian</span> i od
-              ponad 8 lat pomagam ludziom osiągać swoje cele fitness. Moja
-              przygoda z siłownią zaczęła się, gdy sam chciałem poprawić swoją
-              kondycję i sylwetkę.
-            </p>
-            <p class="text-lg leading-relaxed">
-              Z czasem pasja przerodziła się w sposób na życie. Dziś mogę łączyć
-              pracę z tym, co kocham najbardziej.
+            <p
+              class="text-2xl leading-relaxed mb-6 border-l-4 border-red-500 pl-4"
+            >
+              Chcesz skutecznie spalić tłuszcz, zbudować mocną masę mięśniową
+              lub wrócić do pełnej sprawności po urazie czy kontuzji? Jestem
+              trenerem personalnym z wieloletnim doświadczeniem i wiedzą z
+              zakresu dietetyki, treningu oraz rehabilitacji.
             </p>
           </div>
         </div>
@@ -279,21 +286,20 @@
         <!-- Blok 2 -->
         <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div class="order-2 md:order-1">
-            <p class="text-lg leading-relaxed mb-4">
-              W pracy trenera stawiam na indywidualne podejście i realne cele.
-              Nie wierzę w uniwersalne plany — każdy potrzebuje programu
-              dopasowanego do siebie.
-            </p>
-            <p class="text-lg leading-relaxed">
-              Oprócz treningu, skupiam się także na edukacji w zakresie zdrowego
-              odżywiania i regeneracji.
+            <p
+              class="text-2xl leading-relaxed mb-6 border-r-4 border-red-500 pl-4"
+            >
+              Pomagam osobom w różnym wieku i o różnych potrzebach – od redukcji
+              tkanki tłuszczowej, przez budowanie siły i masy mięśniowej, po
+              powrót do sprawności po skręceniach, złamaniach czy problemach z
+              kręgosłupem, takich jak dyskopatie i przepukliny.
             </p>
           </div>
           <div class="order-1 md:order-2 flex items-center justify-center">
             <img
-              src="/src/assets/trener/adi2.webp"
+              src="/src/assets/trener/sesja4.webp"
               alt="Trener personalny"
-              class="transition duration-500 hover:scale-105 h-[400px] border-2 border-red-500 rounded-lg hover:shadow-lg shadow-red-900"
+              class="transition duration-500 hover:scale-105 hover:rotate-1 w-full max-h-[500px] object-cover border-2 border-red-500 rounded-lg hover:shadow-xl shadow-red-900 fade-in-right"
             />
           </div>
         </div>
@@ -302,20 +308,38 @@
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="flex items-center justify-center">
             <img
-              src="/src/assets/trener/adi3.webp"
+              src="/src/assets/trener/sesja6.webp"
               alt="Trener personalny"
-              class="transition duration-500 hover:scale-105 h-[500px] border-2 border-red-500 rounded-lg hover:shadow-lg shadow-red-900"
+              class="transition duration-500 hover:scale-105 hover:-rotate-1 w-full max-h-[500px] object-cover border-2 border-red-500 rounded-lg hover:shadow-xl shadow-red-900 fade-in-left"
             />
           </div>
           <div>
-            <p class="text-lg leading-relaxed mb-4">
-              Pomagam zarówno początkującym, jak i zawodowym sportowcom.
-              Wspólnie pracujemy nad sylwetką, siłą i zdrowiem.
+            <p
+              class="text-2xl leading-relaxed mb-6 border-l-4 border-red-500 pl-4"
+            >
+              Łączę praktykę treningową z wiedzą zdobywaną podczas studiów
+              fizjoterapeutycznych, aby każdy plan był bezpieczny, skuteczny i
+              dopasowany do Twojego ciała.
             </p>
-            <p class="text-lg leading-relaxed">
-              Twoja przemiana może zacząć się już dziś — wystarczy pierwszy
-              krok.
+          </div>
+        </div>
+        <!-- Blok 4 CTA -->
+        <div class="flex justify-center mt-30 mb-20 fade-in-down">
+          <div
+            class="bg-[#1e2129] rounded-2xl p-10 text-center shadow-lg shadow-red-900 transition duration-500 max-w-5xl"
+          >
+            <p
+              class="text-3xl font-semibold leading-relaxed mb-8 text-white red-shadow"
+            >
+              Gotowy, by osiągnąć swoje cele szybciej i bezpieczniej?<br />
+              Zacznij swoją przemianę już dziś!
             </p>
+            <a
+              href="/index.html/#kontakt"
+              class="bg-red-500 text-white xl:px-6 xl:py-4 xl:text-2xl md:text-lg md:px-2 md:py-0 rounded-2xl cursor-pointer hover:bg-red-600 transition-all duration-500"
+            >
+              Wypełnij formularz
+            </a>
           </div>
         </div>
       </section>
@@ -331,18 +355,20 @@
           Przemiany moich podopiecznych
         </h2>
 
-        <div class="relative max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto flex items-center gap-2">
           <!-- Strzałka lewa -->
           <button
             id="prevBtn"
-            class="absolute left-0 top-1/2 -translate-x-15 cursor-pointer hover:bg-red-800 duration-500 transition-all -translate-y-1/2 bg-red-500 w-12 h-12 flex items-center justify-center rounded-full z-10"
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 hover:bg-red-800 text-white font-bold text-xl cursor-pointer z-10 transition-all duration-500"
           >
             &#10094;
           </button>
 
-          <div class="overflow-hidden">
+          <!-- Karuzela -->
+          <div class="overflow-hidden flex-1">
             <div id="karuzela" class="flex transition-all duration-500">
-              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+              <!-- Karta 1 -->
+              <div class="min-w-full lg:min-w-[50%] xl:min-w-[33.333%] p-4">
                 <div
                   class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
                 >
@@ -378,7 +404,9 @@
                   </div>
                 </div>
               </div>
-              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+
+              <!-- Karta 2 -->
+              <div class="min-w-full lg:min-w-[50%] xl:min-w-[33.333%] p-4">
                 <div
                   class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
                 >
@@ -415,7 +443,9 @@
                   </div>
                 </div>
               </div>
-              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+
+              <!-- Karta 3 -->
+              <div class="min-w-full lg:min-w-[50%] xl:min-w-[33.333%] p-4">
                 <div
                   class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
                 >
@@ -452,7 +482,9 @@
                   </div>
                 </div>
               </div>
-              <div class="min-w-full sm:min-w-[50%] lg:min-w-[33.333%] p-4">
+
+              <!-- Karta 4 -->
+              <div class="min-w-full lg:min-w-[50%] xl:min-w-[33.333%] p-4">
                 <div
                   class="max-w-lg rounded-xl overflow-hidden shadow-lg bg-[#1a1d23] p-5 hover:scale-105 duration-300"
                 >
@@ -491,9 +523,11 @@
               </div>
             </div>
           </div>
+
+          <!-- Strzałka prawa -->
           <button
             id="nextBtn"
-            class="absolute right-0 top-1/2 translate-x-15 cursor-pointer hover:bg-red-800 duration-500 transition-all -translate-y-1/2 bg-red-500 w-12 h-12 flex items-center justify-center rounded-full z-10"
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-red-500 hover:bg-red-800 text-white font-bold text-xl cursor-pointer z-10 transition-all duration-500"
           >
             &#10095;
           </button>
@@ -512,10 +546,9 @@
               />
             </a>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur labore consectetur, illum quae id officiis,
-              reprehenderit, sint suscipit et voluptate nulla deserunt
-              cupiditate qui excepturi at a obcaecati magni cum.
+              Trening to nie tylko droga do lepszej sylwetki, ale także większej
+              pewności siebie i zdrowia. Wspólnie sprawimy, że osiągniesz swoje
+              cele i utrzymasz je na lata.
             </p>
           </div>
           <div class="lg:col-span-2 md:col-span-4 col-span-12">
