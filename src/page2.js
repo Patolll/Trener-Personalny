@@ -99,44 +99,114 @@ dropdownLinks.forEach((link) => {
   });
 });
 //carousel interactions
-const carousel = document.getElementById("karuzela");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("karuzela");
+  if (!carousel) return;
+  const viewport = carousel.parentElement; // element z overflow-hidden
+  const cards = Array.from(carousel.children);
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  if (!prevBtn || !nextBtn || cards.length === 0) return;
 
-let currentIndex = 0;
-const totalItems = carousel.children.length;
-let itemsPerView = getItemsPerView();
+  let currentIndex = 0;
+  let cardWidth = 0;
+  let visibleCount = 1;
+  let resizeTimer = null;
+  let isDragging = false;
+  let startX = 0;
 
-function getItemsPerView() {
-  if (window.innerWidth < 640) return 1;
-  if (window.innerWidth < 1024) return 2;
-  return 3;
-}
+  // pozwól na poziome przesuwanie w JS (unikamy konfliktu z domyślnym scrollowaniem)
+  carousel.style.touchAction = "pan-y";
+  carousel.style.willChange = "transform";
 
-window.addEventListener("resize", () => {
-  itemsPerView = getItemsPerView();
-  if (currentIndex > totalItems - itemsPerView) {
-    currentIndex = totalItems - itemsPerView;
+  function calcSizes() {
+    // zabezpieczenie
+    if (!cards[0]) return;
+    cardWidth = Math.round(cards[0].getBoundingClientRect().width);
+    const vw = Math.round(viewport.getBoundingClientRect().width);
+    visibleCount = Math.max(1, Math.floor(vw / (cardWidth || vw)));
+    // upewnij się, że currentIndex jest w zakresie
+    const maxIndex = Math.max(0, cards.length - visibleCount);
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    moveTo(currentIndex, false);
+    updateButtons();
   }
-  carousel.style.transform = `translateX(-${
-    currentIndex * (100 / itemsPerView)
-  }%)`;
-});
 
-nextBtn.addEventListener("click", () => {
-  if (currentIndex < totalItems - itemsPerView) {
-    currentIndex++;
-    carousel.style.transform = `translateX(-${
-      currentIndex * (100 / itemsPerView)
-    }%)`;
+  function moveTo(index, smooth = true) {
+    const maxIndex = Math.max(0, cards.length - visibleCount);
+    index = Math.max(0, Math.min(index, maxIndex));
+    currentIndex = index;
+    const translateX = index * cardWidth;
+    if (smooth)
+      carousel.style.transition = "transform 400ms cubic-bezier(.2,.8,.2,1)";
+    else carousel.style.transition = "none";
+    carousel.style.transform = `translateX(-${translateX}px)`;
+    updateButtons();
   }
-});
 
-prevBtn.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    carousel.style.transform = `translateX(-${
-      currentIndex * (100 / itemsPerView)
-    }%)`;
+  function updateButtons() {
+    const maxIndex = Math.max(0, cards.length - visibleCount);
+    prevBtn.disabled = currentIndex <= 0;
+    nextBtn.disabled = currentIndex >= maxIndex;
+    prevBtn.classList.toggle("opacity-50", prevBtn.disabled);
+    nextBtn.classList.toggle("opacity-50", nextBtn.disabled);
   }
+
+  prevBtn.addEventListener("click", () => moveTo(currentIndex - 1));
+  nextBtn.addEventListener("click", () => moveTo(currentIndex + 1));
+
+  // debounce resize
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(calcSizes, 80);
+  });
+
+  // obsługa przeciągania (pointer events)
+  carousel.addEventListener("pointerdown", (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    carousel.style.transition = "none";
+    try {
+      carousel.setPointerCapture(e.pointerId);
+    } catch (err) {}
+  });
+
+  carousel.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    const base = currentIndex * cardWidth;
+    // ogranicz przesuwanie aby nie wysunąć za bardzo (lekko)
+    const maxTranslate = cards.length * cardWidth - visibleCount * cardWidth;
+    let pos = base - dx;
+    if (pos < 0) pos = pos * 0.5;
+    if (pos > maxTranslate) pos = base - dx * 0.5;
+    carousel.style.transform = `translateX(-${pos}px)`;
+  });
+
+  carousel.addEventListener("pointerup", (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    const dx = e.clientX - startX;
+    // jeśli przesunięcie > 20% szerokości karty — przechodzimy
+    if (Math.abs(dx) > cardWidth * 0.2) {
+      if (dx < 0) moveTo(currentIndex + 1);
+      else moveTo(currentIndex - 1);
+    } else {
+      moveTo(currentIndex);
+    }
+    try {
+      carousel.releasePointerCapture(e.pointerId);
+    } catch (err) {}
+  });
+
+  carousel.addEventListener("pointercancel", () => {
+    isDragging = false;
+    moveTo(currentIndex);
+  });
+
+  // init
+  // opóźnienie na wypadek gdyby obrazy wpływały na rozmiar kart
+  window.setTimeout(calcSizes, 50);
+  // oraz ponownie po załadowaniu obrazów
+  window.addEventListener("load", calcSizes);
 });
