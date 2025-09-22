@@ -1,4 +1,3 @@
-import "./style.css";
 const toggleBtn = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileIcon = document.getElementById("menuIcon");
